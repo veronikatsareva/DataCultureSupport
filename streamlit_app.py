@@ -10,10 +10,10 @@ def load_css():
 load_css()
 
 st.set_page_config(
-    page_title="Data Culture Support", page_icon="static/icons/dc_green.svg"
+    page_title="Data Culture Support", page_icon="static/icons/logo_green.jpeg"
 )
 
-st.logo("static/icons/dc_green.svg")
+st.logo("static/icons/logo_green.jpeg")
 
 st.markdown("<h1>Data Culture Support</h1>", unsafe_allow_html=True)
 

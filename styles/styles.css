@@ -1,50 +1,17 @@
-@font-face {
-     font-family: "HSE Sans";
-     src: url("/static/fonts/HSESans-Black.otf") format("opentype");
-     font-weight: 900;
-     font-style: normal;
-}
- @font-face {
-     font-family: "HSE Sans";
-     src: url("/static/fonts/HSESans-Bold.otf") format("opentype");
-     font-weight: 700;
-     font-style: normal;
-}
- @font-face {
-     font-family: "HSE Sans";
-     src: url("/static/fonts/HSESans-Italic.otf") format("opentype");
-     font-weight: 400;
-     font-style: italic;
-}
- @font-face {
-     font-family: "HSE Sans";
-     src: url("/static/fonts/HSESans-Regular.otf") format("opentype");
-     font-weight: 400;
-     font-style: normal;
-}
- @font-face {
-     font-family: "HSE Sans";
-     src: url("/static/fonts/HSESans-SemiBold.otf") format("opentype");
-     font-weight: 600;
-     font-style: normal;
-}
- @font-face {
-     font-family: "HSE Sans";
-     src: url("/static/fonts/HSESans-Thin.otf") format("opentype");
-     font-weight: 100;
-     font-style: normal;
-}
- .stTabs [aria-selected="true"], .stTabs [data-baseweb="tab-highlight"], .stTabs [data-baseweb="tab"]:hover {
-     color: rgb(234, 69, 239) !important;
+.stTabs [aria-selected="true"], .stTabs [data-baseweb="tab-highlight"], .stTabs [data-baseweb="tab"]:hover {
+     color: #ff1ef7 !important;
 }
  .stTabs [data-baseweb="tab-highlight"] {
-     background-color: rgb(234, 69, 239) !important;
+     background-color: #ff1ef7 !important;
 }
  .stTabs [data-baseweb="tab"] * {
      font-size: 20px !important;
 }
  h1, h2, h3, h4, p, li, blockquote {
-     font-family: "HSE Sans" !important;
+     font-family: 'Roboto' !important;
+}
+code {
+     font-family: 'Roboto Mono' !important;
 }
  h1, h2, h3 {
      text-align: center !important;
@@ -53,22 +20,22 @@
      text-align: justify !important;
 }
  h1 {
-     color: rgb(228, 252, 83) !important;
+     color: #dcff05 !important;
 }
  a {
-     color: rgb(234, 69, 239) !important;
+     color: #ff1ef7 !important;
 }
  th, td {
      padding: 15px;
      text-align: justify;
-     font-family: "HSE Sans" !important;
+     font-family: 'Roboto' !important;
 }
  .div-important {
-     background-color: rgb(228, 252, 83);
-     border: 2px solid rgb(234, 69, 239);
+     background-color: #dcff05;
+     border: 2px solid #2300fa;
      color: black;
      padding: 10px;
      margin: 10px;
-     font-family: "HSE Sans" !important;
+     font-family: 'Roboto' !important;
 }
  
