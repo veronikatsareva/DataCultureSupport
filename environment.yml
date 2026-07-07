@@ -8,4 +8,6 @@ dependencies:
   - spacy
   - pymorphy3
   - pymorphy3-dicts-ru
+  - pip:
+      - ru-core-news-sm
 prefix: /opt/homebrew/anaconda3/envs/dataculturesupport
