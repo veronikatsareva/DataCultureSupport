@@ -38,4 +38,70 @@ code {
      margin: 10px;
      font-family: 'Roboto' !important;
 }
- 
+
+[data-testid="stPageLink"] a {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100%;
+    padding: 2px;
+    background-color: #F6F6F6;
+    border: 1px solid #2300fa;
+    border-radius: 6px;
+    color: #2300fa !important;
+    font-family: "Roboto";
+    font-weight: bold;
+}
+
+[data-testid="stPageLink"] a:hover {
+    background-color: #2300fa;
+    color: #F6F6F6 !important;
+}
+
+[data-testid="stPageLink"] a span {
+    color: inherit !important;
+}
+
+mark {
+     color: #dcff05;
+}
+
+hr {
+     background-color: black !important;
+}
+
+
+[data-testid="stSidebarNav"] a,
+[data-testid="stSidebarNav"] a * {
+    color: var(--text-color) !important;
+    font-family: "Roboto" !important;
+    font-size: 16px;
+}
+
+[data-testid="stSidebarNav"] a[aria-current="page"] {
+    background-color: #2300fa !important;
+    border-radius: 8px;
+}
+
+[data-testid="stSidebarNav"] a[aria-current="page"] * {
+    color: white !important;
+}
+
+div[data-testid="stTextInput"] div[data-baseweb="input"] {
+        border: 2px solid #ff1ef7 !important;
+        border-radius: 4px !important;
+    }
+
+div[data-testid="InputInstructions"] > span {
+     visibility: hidden;
+     position: relative;
+}
+
+div[data-testid="InputInstructions"] > span::after {
+        content: "Для поиска нажмите enter" !important;
+        visibility: visible;
+        position: absolute;
+        right: 0;
+        top: 0;
+        white-space: nowrap;
+    }

@@ -1,0 +1,11 @@
+name: dataculturesupport
+channels:
+  - defaults
+dependencies:
+  - streamlit
+  - whoosh
+  - bs4
+  - spacy
+  - pymorphy3
+  - pymorphy3-dicts-ru
+prefix: /opt/homebrew/anaconda3/envs/dataculturesupport
