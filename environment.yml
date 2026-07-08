@@ -9,6 +9,7 @@ dependencies:
   - pymorphy3
   - streamlit
   - pip
+  - pip:
     - https://github.com/explosion/spacy-models/releases/download/ru_core_news_sm-3.8.0/ru_core_news_sm-3.8.0-py3-none-any.whl
   - rapidfuzz
 prefix: /opt/homebrew/anaconda3/envs/dataculturesupport
