@@ -45,7 +45,7 @@ with st.sidebar:
     st.markdown("<h3>Поиск по сайту</h3>", unsafe_allow_html=True)
 
     query = st.text_input(
-        "", label_visibility="collapsed", placeholder="Введите запрос"
+        "Запрос пользователя", label_visibility="collapsed", placeholder="Введите запрос"
     )
 
     if query:
