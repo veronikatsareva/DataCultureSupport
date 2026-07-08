@@ -6,6 +6,7 @@ from whoosh.fields import Schema, ID, TEXT
 import os.path
 from whoosh.index import create_in, open_dir
 from whoosh.qparser import QueryParser
+from rapidfuzz import process, fuzz, utils
 import shutil
 
 nlp = spacy.load("ru_core_news_sm")
@@ -41,7 +42,12 @@ names = {
 
 
 def textPreprocess(text):
-    """ """
+    """
+    This function tokenizes text via spacy and lemmatize each token
+    via pymorphy. In addition, whitespaces and punctuation is deleted.
+    :param text: a string of the text
+    :returns: a string of the preprocessed text
+    """
     processedText = [
         morph.parse(token.text)[0].normal_form
         for token in nlp(text)
@@ -51,9 +57,17 @@ def textPreprocess(text):
 
 
 def htmlParser():
-    """ """
+    """
+    This function is a parser of the html-content from the website.
+    It extracts the text from each page that is placed in html dir
+    and preprocessed it for further indexation.
+    There are no parameters.
+    :returns: a dictionary where key is name of the file and values
+    are tuples that consists of page title, processed text and
+    original text from html.
+    """
     pages = {}
-    path = "/Users/veronikatsareva/Desktop/DataCultureSupport/html"
+    path = Path.cwd() / "html"
     for file in Path(path).rglob("*.html"):
         if "main" not in file.name:
             soup = BeautifulSoup(open(file).read(), "html.parser")
@@ -66,7 +80,12 @@ def htmlParser():
 
 
 def buildIndex():
-    """ """
+    """
+    This function creates indexation of html pages for further
+    searching via whoosh.
+    There are no parameters.
+    :returns: 0 when the code is succesfully executed
+    """
     pages = htmlParser()
     schema = Schema(
         title=TEXT(stored=True),
@@ -96,13 +115,32 @@ def buildIndex():
 
 
 def search(userQuery):
-    """ """
+    """
+    This function is an implementation of the search via whoosh. Before
+    searching, each token is preprocessed and checked on the issue of
+    typos via rapidfuzz.
+    :param userQuery: string, query from the user
+    :returns: a dictionary, where key is a tuple of the page's title and path on the website
+    and value is a list with strings. Each string is a preview of the page's text with highlighted
+    tokens from query.
+    """
     ix = open_dir("indexDir")
 
     output = {}
 
     with ix.searcher() as searcher:
-        userQueryLemmatized = textPreprocess(userQuery)
+        vocabulary = {term.decode("utf-8") for term in searcher.lexicon("content")}
+
+        userQueryChecked = []
+
+        for word in userQuery.split():
+            checkedWord, ratio, _ = process.extractOne(
+                word, vocabulary, scorer=fuzz.QRatio, processor=utils.default_process
+            )
+            if ratio > 80:
+                userQueryChecked.append(checkedWord)
+
+        userQueryLemmatized = textPreprocess(" ".join(userQueryChecked))
         query = QueryParser("content", ix.schema).parse(userQueryLemmatized)
         results = searcher.search(query)
 
@@ -117,4 +155,5 @@ def search(userQuery):
         return output
 
 
+# Run this function if the content of the pages has changed and index must be rebuilt.
 # buildIndex()
