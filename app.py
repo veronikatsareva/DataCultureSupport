@@ -3,8 +3,15 @@ import index
 
 
 def load_css():
+    """
+    This function loads css styles from styles.css for rendering htmls of the pages.
+    There are no parameters.
+    :returns: 0 when the code is succesfully executed.
+    """
     with open("styles/styles.css") as f:
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+    
+    return 0
 
 
 load_css()
