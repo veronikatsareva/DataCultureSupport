@@ -8,10 +8,10 @@
      font-size: 20px !important;
 }
  h1, h2, h3, h4, p, li, blockquote {
-     font-family: 'Roboto' !important;
+     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }
 code {
-     font-family: 'Roboto Mono' !important;
+     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }
  h1, h2, h3 {
      text-align: center !important;
@@ -28,7 +28,7 @@ code {
  th, td {
      padding: 15px;
      text-align: justify;
-     font-family: 'Roboto' !important;
+     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }
  .div-important {
      background-color: #dcff05;
@@ -36,7 +36,7 @@ code {
      color: black;
      padding: 10px;
      margin: 10px;
-     font-family: 'Roboto' !important;
+     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }
 
 [data-testid="stPageLink"] a {
@@ -49,7 +49,7 @@ code {
     border: 1px solid #2300fa;
     border-radius: 6px;
     color: #2300fa !important;
-    font-family: "Roboto";
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
     font-weight: bold;
 }
 
@@ -74,7 +74,7 @@ hr {
 [data-testid="stSidebarNav"] a,
 [data-testid="stSidebarNav"] a * {
     color: var(--text-color) !important;
-    font-family: "Roboto" !important;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
     font-size: 16px;
 }
 
@@ -114,7 +114,7 @@ div[data-testid="stAlert"] {
 
 div[data-testid="stAlert"] p {
     color: black !important;
-    font-family: "Roboto" !important;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
     font-size: 16px !important;
     font-weight: bold;
     text-align: center !important;
