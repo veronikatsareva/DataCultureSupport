@@ -105,3 +105,17 @@ div[data-testid="InputInstructions"] > span::after {
         top: 0;
         white-space: nowrap;
     }
+
+div[data-testid="stAlert"] {
+    background-color: white !important;
+    border: 2px solid #2300fa !important;
+    border-radius: 8px;
+}
+
+div[data-testid="stAlert"] p {
+    color: black !important;
+    font-family: "Roboto" !important;
+    font-size: 16px !important;
+    font-weight: bold;
+    text-align: center !important;
+}
