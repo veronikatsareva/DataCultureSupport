@@ -14,7 +14,7 @@ morph = pymorphy3.MorphAnalyzer()
 
 names = {
     "extra.html": "Важные ссылки",
-    "main.html": "Главная",
+    "main.html": "Главная страница",
     "registration_contract.html": "Заключение договора",
     "registration_sources.html": "Электронные ресурсы",
     "registration_main.html": "Оформление преподавателей",
@@ -24,9 +24,10 @@ names = {
     "marks_cheating.html": "Списывание",
     "marks_retake.html": "Пересдачи и отчисление",
     "marks_skip.html": "Пропуск форм контроля",
-    "assistants_main.html": "Учебные Ассистенты",
+    "assistants_main.html": "Учебные ассистенты",
     "assistants_booking.html": "Бронирование УА",
     "assistants_duties.html": "Обязанности УА",
+    "assistants_coordinators.html": "Старшие ассистенты",
     "classes_consultations.html": "Консультации и присутственные часы",
     "classes_page.html": "Страница курса",
     "classes_computers.html": "Компьютерные классы",
@@ -38,6 +39,9 @@ names = {
     "team_coordinators.html": "Методический отдел",
     "team_main.html": "Команда проекта",
     "iads_main.html": "Независимые экзамены",
+    "iads_levels.html": "Уровни экзаменов",
+    "iads_recalculate.html": "Перезачет",
+    "iads_what.html": "Что это?"
 }
 
 
