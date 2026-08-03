@@ -15,3 +15,6 @@ with tab3:
 
 with tab4:
     st.html(open("html/marks/marks_cheating.html").read())
+
+with tab5:
+    st.html(open("html/marks/marks_skip.html").read())

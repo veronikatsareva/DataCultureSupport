@@ -24,15 +24,15 @@ st.logo("static/icons/logo_green.jpeg")
 
 st.markdown("<h1>Data Culture Support</h1>", unsafe_allow_html=True)
 
-pageMain = st.Page("pages/main.py", title="Главная")
+pageMain = st.Page("pages/main.py", title="Главная страница")
 pageTeam = st.Page("pages/team.py", title="Команда проекта")
 pageOrg = st.Page("pages/registration.py", title="Оформление преподавателей")
 pageClasses = st.Page("pages/classes.py", title="Проведение занятий")
-pageAssistance = st.Page("pages/assistants.py", title="Учебные Ассистенты")
+pageAssistance = st.Page("pages/assistants.py", title="Учебные ассистенты")
 pageMarks = st.Page("pages/marks.py", title="Оценивание студентов")
 pageExams = st.Page("pages/iads.py", title="Независимые экзамены")
 pageLMS = st.Page("pages/smartlms.py", title="Работа с SmartLMS")
-pageRef = st.Page("pages/extra.py", title="Важные ссылки")
+pageRef = st.Page("pages/extra.py", title="Полезные ссылки")
 
 pg = st.navigation(
     [
