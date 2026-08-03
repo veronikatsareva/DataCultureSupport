@@ -142,3 +142,38 @@ div[data-testid="stAlert"] p {
 .div2 {
     grid-area: 1 / 2 / 2 / 3;
 }
+
+img {
+    border: 2px solid #2300fa;
+}
+
+.pivot-table {
+    border-collapse: collapse;
+    border: 2px solid #2300fa;
+    width: 100%;
+}
+.pivot-table th,
+.pivot-table td {
+    border: 1px solid #2300fa;
+    padding: 8px 12px;
+    vertical-align: top;
+    text-align: left;
+}
+.pivot-table th {
+    text-align: center;
+    background-color: #dcff05;
+}
+.pivot-table td:first-child {
+    background-color: #dcff05;
+}
+.pivot-table .header-row td {
+    text-align: center;
+    font-weight: bold;
+    background-color: #dcff05;
+}
+.pivot-table td:not(:first-child):not(.header-row td) {
+    background-color: #ffffff;
+}
+.pivot-table .header-row td:first-child {
+    background-color: #dcff05;
+}

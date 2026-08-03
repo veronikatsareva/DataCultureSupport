@@ -35,13 +35,18 @@ names = {
     "classes_main.html": "Проведение занятий",
     "classes_timetable.html": "Расписание",
     "smartlms_main.html": "Работа с SmartLMS",
+    "smartlms_marks.html": "Оценки в SmartLMS",
+    "smartlms_materials.html": "Материалы в SmartLMS",
+    "smartlms_midterm-1.html": "Создание форм контроля в SmartLMS",
+    "smartlms_midterm-2.html": "Отображение форм контроля в SmartLMS",
+    "smartlms_users.html": "Группы и пользователи в SmartLMS",
     "team_project.html": "Проектный офис",
     "team_coordinators.html": "Методический отдел",
     "team_main.html": "Команда проекта",
     "iads_main.html": "Независимые экзамены",
     "iads_levels.html": "Уровни экзаменов",
     "iads_recalculate.html": "Перезачет",
-    "iads_what.html": "Что это?"
+    "iads_what.html": "Что такое НЭ?"
 }
 
 
@@ -160,4 +165,4 @@ def search(userQuery):
 
 
 # Run this function if the content of the pages has changed and index must be rebuilt.
-# buildIndex()
+buildIndex()
