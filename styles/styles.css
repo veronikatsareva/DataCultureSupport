@@ -127,3 +127,18 @@ div[data-testid="stAlert"] p {
     font-weight: bold;
     text-align: center !important;
 }
+
+.parent {
+    display: grid;
+    grid-template-columns: 2fr 0.5fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 50px;
+    grid-row-gap: 20px;
+}
+
+.div1 {
+    grid-area: 1 / 1 / 2 / 2;
+}
+.div2 {
+    grid-area: 1 / 2 / 2 / 3;
+}
