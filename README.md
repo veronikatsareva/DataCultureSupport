@@ -1,19 +1,24 @@
-# 🎈 Blank app template
+<h1 style='color:#dcff05;text-align:center'> Data Culture Support</h1>
 
-A simple Streamlit app template for you to modify!
+<p style='color:#2300fa;text-align:center'> Справочник преподавателя проекта «Культура работы с данными» (Data Culture), ФКН НИУ ВШЭ</p>
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://blank-app-template.streamlit.app/)
+Сайт доступен по постоянной [ссылке](https://dataculturesupport.streamlit.app/).
 
-### How to run it on your own machine
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://dataculturesupport.streamlit.app/)
 
-1. Install the requirements
+<hr>
 
-   ```
-   $ pip install -r requirements.txt
-   ```
+Для запуска сайта локально необходимо:
 
-2. Run the app
+1. Создать виртуальное окружение и установить все необходимые библиотеки.
 
-   ```
-   $ streamlit run streamlit_app.py
-   ```
+```
+conda env create -f environment.yml
+conda activate dataculturesupport
+```
+
+2. Запустить приложение.
+
+```
+streamlit run app.py
+```
