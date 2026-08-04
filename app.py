@@ -49,7 +49,9 @@ pg = st.navigation(
 )
 
 with st.sidebar:
-    st.markdown("<h3>Поиск по сайту</h3>", unsafe_allow_html=True)
+    st.markdown("<h3 style='padding:0;color:#2300fa;'>Справочник преподавателя проекта «Культура работы с данными» (Data Culture) <br> ФКН НИУ ВШЭ</h3><hr>", unsafe_allow_html=True)
+
+    st.markdown("<h3 style='padding-top:0;'>Поиск по сайту</h3>", unsafe_allow_html=True)
 
     query = st.text_input(
         "Запрос пользователя",

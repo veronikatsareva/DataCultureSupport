@@ -158,6 +158,7 @@ img {
     padding: 8px 12px;
     vertical-align: top;
     text-align: left;
+    color: black;
 }
 .pivot-table th {
     text-align: center;
@@ -176,4 +177,8 @@ img {
 }
 .pivot-table .header-row td:first-child {
     background-color: #dcff05;
+}
+
+[data-testid="stSidebarNav"] + div {
+    border-top: 1px solid black !important;
 }
