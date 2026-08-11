@@ -9,6 +9,14 @@
 .stTabs [data-baseweb="tab"] * {
     font-size: 20px !important;
 }
+:root {
+    color-scheme: light dark;
+    --text-theme: light-dark(#000000, #ffffff);
+    --title-theme: light-dark(#2300fa, #dcff05);
+}
+h1 {
+    line-height: 1 !important;
+}
 h1,
 h2,
 h3,
@@ -18,25 +26,31 @@ li,
 blockquote {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }
+h1 {
+    font-family: "Roboto Mono" !important;
+}
 h1,
 h2,
-h3 {
-    text-align: center !important;
-}
+h3,
 p,
 li {
-    text-align: justify !important;
+    text-align: left !important;
+    color: var(--text-theme) !important;
 }
 h1 {
-    color: #dcff05 !important;
+    font-size: 58px !important;
+}
+.sidebar-title {
+    color: var(--title-theme) !important;
+    padding: 0 !important;
 }
 a {
-    color: #ff1ef7 !important;
+    color: #2300fa !important;
 }
 th,
 td {
     padding: 15px;
-    text-align: justify;
+    text-align: left;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }
 .div-important {
@@ -56,7 +70,6 @@ td {
     padding: 2px;
     background-color: #f6f6f6;
     border: 1px solid #2300fa;
-    border-radius: 6px;
     color: #2300fa !important;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
     font-weight: bold;
@@ -88,7 +101,7 @@ hr {
 
 [data-testid="stSidebarNav"] a[aria-current="page"] {
     background-color: #2300fa !important;
-    border-radius: 8px;
+    border-radius: 0px;
 }
 
 [data-testid="stSidebarNav"] a[aria-current="page"] * {
@@ -96,7 +109,6 @@ hr {
 }
 
 div[data-testid="stTextInput"] div[data-baseweb="input"] {
-    border: 2px solid #ff1ef7 !important;
     border-radius: 4px !important;
 }
 
@@ -125,7 +137,7 @@ div[data-testid="stAlert"] p {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
     font-size: 16px !important;
     font-weight: bold;
-    text-align: center !important;
+    text-align: left !important;
 }
 
 .parent {
@@ -143,10 +155,6 @@ div[data-testid="stAlert"] p {
     grid-area: 1 / 2 / 2 / 3;
 }
 
-img {
-    border: 2px solid #2300fa;
-}
-
 .pivot-table {
     border-collapse: collapse;
     border: 2px solid #2300fa;
@@ -161,14 +169,14 @@ img {
     color: black;
 }
 .pivot-table th {
-    text-align: center;
+    text-align: left;
     background-color: #dcff05;
 }
 .pivot-table td:first-child {
     background-color: #dcff05;
 }
 .pivot-table .header-row td {
-    text-align: center;
+    text-align: left;
     font-weight: bold;
     background-color: #dcff05;
 }
