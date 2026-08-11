@@ -34,7 +34,7 @@ blockquote {
 }
 
 h1 {
-    font-family: "Roboto Mono" !important;
+    font-family: "Roboto Mono", monospace !important;
 }
 
 h1,
