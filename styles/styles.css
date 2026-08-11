@@ -3,20 +3,26 @@
 .stTabs [data-baseweb="tab"]:hover {
     color: #ff1ef7 !important;
 }
+
 .stTabs [data-baseweb="tab-highlight"] {
     background-color: #ff1ef7 !important;
 }
+
 .stTabs [data-baseweb="tab"] * {
     font-size: 20px !important;
 }
+
 :root {
     color-scheme: light dark;
     --text-theme: light-dark(#000000, #ffffff);
-    --title-theme: light-dark(#2300fa, #dcff05);
+    --text-reverse-theme: light-dark(#ffffff, #000000);
+    --accent-theme: light-dark(#2300fa, #dcff05);
 }
+
 h1 {
     line-height: 1 !important;
 }
+
 h1,
 h2,
 h3,
@@ -26,9 +32,11 @@ li,
 blockquote {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }
+
 h1 {
     font-family: "Roboto Mono" !important;
 }
+
 h1,
 h2,
 h3,
@@ -37,26 +45,31 @@ li {
     text-align: left !important;
     color: var(--text-theme) !important;
 }
+
 h1 {
     font-size: 58px !important;
 }
+
 .sidebar-title {
-    color: var(--title-theme) !important;
+    color: var(--accent-theme) !important;
     padding: 0 !important;
 }
+
 a {
-    color: #2300fa !important;
+    color: var(--accent-theme) !important;
 }
+
 th,
 td {
     padding: 15px;
     text-align: left;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }
+
 .div-important {
     background-color: #dcff05;
     border: 2px solid #2300fa;
-    color: black;
+    color: #000000;
     padding: 10px;
     margin: 10px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
@@ -68,20 +81,24 @@ td {
     align-items: center !important;
     width: 100%;
     padding: 2px;
-    background-color: #f6f6f6;
-    border: 1px solid #2300fa;
-    color: #2300fa !important;
+    background-color: transparent !important;
+    border: 1px solid var(--accent-theme) !important;
+    color: var(--text-theme) !important;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
     font-weight: bold;
 }
 
 [data-testid="stPageLink"] a:hover {
-    background-color: #2300fa;
-    color: #f6f6f6 !important;
+    background-color: var(--accent-theme) !important;
+    color: var(--text-reverse-theme) !important;
 }
 
 [data-testid="stPageLink"] a span {
     color: inherit !important;
+}
+
+[data-testid="stPageLink"] a:hover span {
+    color: var(--text-reverse-theme) !important;
 }
 
 mark {
@@ -89,26 +106,25 @@ mark {
 }
 
 hr {
-    background-color: black !important;
+    background-color: var(--text-theme) !important;
 }
 
 [data-testid="stSidebarNav"] a,
 [data-testid="stSidebarNav"] a * {
-    color: var(--text-color) !important;
+    color: var(--text-theme) !important;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
     font-size: 16px;
 }
 
-[data-testid="stSidebarNav"] a[aria-current="page"] {
-    background-color: #2300fa !important;
-    border-radius: 0px;
-}
-
+[data-testid="stSidebarNav"] a[aria-current="page"],
 [data-testid="stSidebarNav"] a[aria-current="page"] * {
-    color: white !important;
+    background-color: var(--accent-theme) !important;
+    color: var(--text-reverse-theme) !important;
+    border-radius: 8px;
 }
 
 div[data-testid="stTextInput"] div[data-baseweb="input"] {
+    border: 2px solid #ff1ef7 !important;
     border-radius: 4px !important;
 }
 
@@ -127,13 +143,13 @@ div[data-testid="InputInstructions"] > span::after {
 }
 
 div[data-testid="stAlert"] {
-    background-color: white !important;
+    background-color: light-dark(#ffffff, #0e1117) !important;
     border: 2px solid #2300fa !important;
     border-radius: 8px;
 }
 
 div[data-testid="stAlert"] p {
-    color: black !important;
+    color: var(--text-theme) !important;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
     font-size: 16px !important;
     font-weight: bold;
@@ -151,6 +167,7 @@ div[data-testid="stAlert"] p {
 .div1 {
     grid-area: 1 / 1 / 2 / 2;
 }
+
 .div2 {
     grid-area: 1 / 2 / 2 / 3;
 }
@@ -160,33 +177,39 @@ div[data-testid="stAlert"] p {
     border: 2px solid #2300fa;
     width: 100%;
 }
+
 .pivot-table th,
 .pivot-table td {
     border: 1px solid #2300fa;
     padding: 8px 12px;
     vertical-align: top;
     text-align: left;
-    color: black;
+    color: var(--text-theme) !important;
 }
+
 .pivot-table th {
     text-align: left;
     background-color: #dcff05;
 }
+
 .pivot-table td:first-child {
     background-color: #dcff05;
 }
+
 .pivot-table .header-row td {
     text-align: left;
     font-weight: bold;
     background-color: #dcff05;
 }
+
 .pivot-table td:not(:first-child):not(.header-row td) {
-    background-color: #ffffff;
+    background-color: light-dark(#ffffff, #1a1d24);
 }
+
 .pivot-table .header-row td:first-child {
     background-color: #dcff05;
 }
 
 [data-testid="stSidebarNav"] + div {
-    border-top: 1px solid black !important;
+    border-top: 1px solid var(--text-theme) !important;
 }
