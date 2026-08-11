@@ -124,8 +124,8 @@ hr {
 }
 
 div[data-testid="stTextInput"] div[data-baseweb="input"] {
-    border: 2px solid #ff1ef7 !important;
-    border-radius: 4px !important;
+    border: 2px solid var(--accent-theme) !important;
+    border-radius: 0px !important;
 }
 
 div[data-testid="InputInstructions"] > span {
