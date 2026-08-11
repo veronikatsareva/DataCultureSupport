@@ -120,7 +120,7 @@ hr {
 [data-testid="stSidebarNav"] a[aria-current="page"] * {
     background-color: var(--accent-theme) !important;
     color: var(--text-reverse-theme) !important;
-    border-radius: 8px;
+    border-radius: 0px !important;
 }
 
 div[data-testid="stTextInput"] div[data-baseweb="input"] {
@@ -145,7 +145,7 @@ div[data-testid="InputInstructions"] > span::after {
 div[data-testid="stAlert"] {
     background-color: light-dark(#ffffff, #0e1117) !important;
     border: 2px solid #2300fa !important;
-    border-radius: 8px;
+    border-radius: 0px !important;
 }
 
 div[data-testid="stAlert"] p {
