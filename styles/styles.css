@@ -213,3 +213,50 @@ div[data-testid="stAlert"] p {
 [data-testid="stSidebarNav"] + div {
     border-top: 1px solid var(--text-theme) !important;
 }
+
+.banner-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 15px;
+    z-index: 999999;
+    overflow: hidden;
+    background: white;
+    pointer-events: none;
+    transition: left 0.2s ease;
+}
+
+body:has([data-testid="stSidebar"][aria-expanded="true"]) .banner-header {
+    left: 300px;
+}
+
+body:has([data-testid="stSidebar"][aria-expanded="false"]) .banner-header {
+    left: 0;
+}
+
+.banner-track {
+    display: flex;
+    width: max-content;
+    height: 15px;
+    animation: banner-scroll 25s linear infinite;
+    will-change: transform;
+}
+
+.banner-track img {
+    display: block;
+    height: 15px;
+    width: auto;
+    max-width: none;
+    flex-shrink: 0;
+}
+
+@keyframes banner-scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}

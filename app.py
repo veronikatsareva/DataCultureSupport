@@ -14,7 +14,30 @@ def load_css():
     return 0
 
 
+def add_banner():
+    """
+    This function add a running banner to the top of the pages.
+    There are no parameters.
+    :returns: 0 when the code is succesfully executed.
+    """
+    st.markdown(
+        """
+        <div class="banner-header">
+            <div class="banner-track">
+                <img src="https://raw.githubusercontent.com/veronikatsareva/DataCultureSupport/refs/heads/main/static/%D0%B1%D0%B5%D0%B3%D1%83%D1%89%D0%B0%D1%8F%20%D1%81%D1%82%D1%80%D0%BE%D0%BA%D0%B0.png">
+                <img src="https://raw.githubusercontent.com/veronikatsareva/DataCultureSupport/refs/heads/main/static/%D0%B1%D0%B5%D0%B3%D1%83%D1%89%D0%B0%D1%8F%20%D1%81%D1%82%D1%80%D0%BE%D0%BA%D0%B0.png">
+                <img src="https://raw.githubusercontent.com/veronikatsareva/DataCultureSupport/refs/heads/main/static/%D0%B1%D0%B5%D0%B3%D1%83%D1%89%D0%B0%D1%8F%20%D1%81%D1%82%D1%80%D0%BE%D0%BA%D0%B0.png">
+                <img src="https://raw.githubusercontent.com/veronikatsareva/DataCultureSupport/refs/heads/main/static/%D0%B1%D0%B5%D0%B3%D1%83%D1%89%D0%B0%D1%8F%20%D1%81%D1%82%D1%80%D0%BE%D0%BA%D0%B0.png">
+            </div>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+    return 0
+
+
 load_css()
+add_banner()
 
 st.set_page_config(
     page_title="Data Culture Support", page_icon="static/icons/logo_green.jpeg"
@@ -47,9 +70,14 @@ pg = st.navigation(
 )
 
 with st.sidebar:
-    st.markdown("<h3 class='sidebar-title'>Справочник преподавателя проекта «Культура работы с данными» (Data Culture) <br> ФКН НИУ ВШЭ</h3><hr>", unsafe_allow_html=True)
+    st.markdown(
+        "<h3 class='sidebar-title'>Справочник преподавателя проекта «Культура работы с данными» (Data Culture) <br> ФКН НИУ ВШЭ</h3><hr>",
+        unsafe_allow_html=True,
+    )
 
-    st.markdown("<h3 style='padding-top:0;'>Поиск по сайту</h3>", unsafe_allow_html=True)
+    st.markdown(
+        "<h3 style='padding-top:0;'>Поиск по сайту</h3>", unsafe_allow_html=True
+    )
 
     query = st.text_input(
         "Запрос пользователя",
