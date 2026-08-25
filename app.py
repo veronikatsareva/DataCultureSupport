@@ -40,10 +40,10 @@ load_css()
 add_banner()
 
 st.set_page_config(
-    page_title="Data Culture Support", page_icon="static/icons/logo_green.jpeg"
+    page_title="Data Culture Support", page_icon="static/icons/dc_dark.png"
 )
 
-st.logo("static/icons/logo_green.jpeg")
+st.logo("static/icons/dc_dark.png", size="large")
 
 pageMain = st.Page("pages/main.py", title="Главная страница")
 pageTeam = st.Page("pages/team.py", title="Команда проекта")
