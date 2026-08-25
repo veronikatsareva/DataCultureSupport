@@ -164,13 +164,24 @@ div[data-testid="stAlert"] p {
     grid-row-gap: 20px;
 }
 
-.div1 {
+.parent > .div1 {
     grid-area: 1 / 1 / 2 / 2;
 }
 
-.div2 {
+.parent > .div2 {
     grid-area: 1 / 2 / 2 / 3;
 }
+
+.parent-img {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 50px;
+    grid-row-gap: 20px;
+}
+
+.parent-img > .div1 { grid-area: 1 / 1 / 2 / 2; }
+.parent-img > .div2 { grid-area: 1 / 2 / 2 / 4; }
 
 .pivot-table {
     border-collapse: collapse;
